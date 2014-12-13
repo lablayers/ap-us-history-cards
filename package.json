@@ -1,0 +1,19 @@
+{
+  "name": "APUSH-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LabLayers/APUSH-cards.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LabLayers/APUSH-cards/issues"
+  },
+  "homepage": "https://github.com/LabLayers/APUSH-cards"
+}
