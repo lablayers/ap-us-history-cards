@@ -84,7 +84,12 @@
     /* height - padding */
     height: 478px;
   }
+  .front {
+    background: white;
+    color: black;
+  }
   h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2.2em;
     line-height: 1.2em;
     margin-top: 10px;
@@ -92,6 +97,35 @@
     word-break: keep-all;
     word-wrap: break-word;
     -webkit-hyphens: auto;
+  }
+  .deck {
+    /* font-family: 'Francois One', cursive; */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    right: 65px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .number {
+    font-family: 'Sansita One', cursive;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    background: black;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .back {
+    background: black;
+    color: white;
   }
   ul {
     margin-top: 0px;
@@ -108,33 +142,6 @@
   li:not(:last-child) {
     border-bottom: 1px solid lightGray;
     padding-bottom: 0.5em;
-  }
-  .card .front {
-    background: black;
-    color: white;
-  }
-  .deck {
-    font-family: 'Francois One', cursive;
-    position: absolute;
-    bottom: 20px;
-    right: 65px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 32px;
-  }
-  .number {
-    font-family: 'Sansita One', cursive;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    color: black;
-    background: white;
-    text-align: center;
-    font-size: 14px;
-    line-height: 32px;
   }
   </style>
   <script>
