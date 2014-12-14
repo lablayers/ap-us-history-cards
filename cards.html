@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=300, height=500, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>PDF</title>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
@@ -40,6 +41,34 @@
   };
   xhr.send();
   </script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', Arial;
+    max-width: 300px;
+    overflow-x: hidden;
+  }
+  .card .front, .card .back {
+      width: 300px;
+      height: 500px;
+      display: inline-block;
+      padding: 12px;
+      box-shadow: 0 0 20px gray inset;
+      font-size: 20px;
+      line-height: 1.2em;
+      position: relative;
+  }
+  h1 {
+    line-height: 1em;
+  }
+  li {
+    margin-left: 0px;
+    margin-bottom: 0.5em;
+  }
+  </style>
 </head>
 <body>
   <div id="cards">

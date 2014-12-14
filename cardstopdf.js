@@ -1,17 +1,19 @@
 var page = require('webpage').create();
 
 page.paperSize = {
-  width: '3in',
-  height: '5in',
-  margin: {
-    top: '50px',
-    left: '20px',
-    bottom: '50px',
-    right: '20px'
-  }
+  width: '380',
+  height: '635',
+  margin: '0px'
+}
+
+page.viewportSize = {
+  width: 300,
+  height: 500
 };
 
-page.open('cards.html', function () {
+// page.zoomFactor = 300.0/100.0;
+
+page.open('http://localhost:4000/cards.html', function () {
   page.render('cards.pdf');
   phantom.exit();  
 });
