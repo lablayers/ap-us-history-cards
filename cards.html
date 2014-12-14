@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'data.json');
+  xhr.onreadystatechange = function () {
+    if(xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      var cardHTML = ''; // '<ul class="bulleted">';
+      // console.log(data.length);
+      for (var i=0; i<data.length; i += 1) {
+        // For each card
+        cardHTML += '<div class="card">';
+
+          // For each title
+          cardHTML += '<div class="front">';
+            cardHTML += ('<h1>' + data[i].card[0].title + '</h1>');
+            console.log("Title: " + data[i].card[0].title);
+          cardHTML += '</div>';
+
+          cardHTML += '<div class="back">';
+            cardHTML += '<ul>';
+            // For each item
+            for (var cardData=1; cardData<(data[cardData].card.length - 1); cardData += 1) {
+              cardHTML += ('<li>' + data[i].card[cardData].line + '</li>');
+              console.log("Bullet: " + data[i].card[cardData].line);
+            }
+            cardHTML += '</ul>';
+          cardHTML += '</div>';
+
+        cardHTML += '</div>';
+      }
+      // cardHTML += '</ul>';
+      document.getElementById('cards').innerHTML = cardHTML;
+    }
+  };
+  xhr.send();
+  </script>
+</head>
+<body>
+  <div id="cards">
+    
+  </div>
+</body>
+</html>
