@@ -14,6 +14,8 @@ page.viewportSize = {
 // page.zoomFactor = 300.0/100.0;
 
 page.open('http://localhost:4000/cards.html', function () {
-  page.render('cards.pdf');
-  phantom.exit();  
+  setTimeout(function() {
+    page.render('cards.pdf');
+    phantom.exit();  
+  }, 5000);
 });
